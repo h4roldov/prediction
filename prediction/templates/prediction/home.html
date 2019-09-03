@@ -1,0 +1,56 @@
+<html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <title>Reconocimiento App</title>
+</head>
+<nav class="navbar navbar-light bg-dark mb-5 shadow">
+    <span class="navbar-brand mb-0 h1 text-white display-4">Reconocimiento de Actividades</span>
+</nav>
+
+<style>
+    body {
+        background: url('https://media.istockphoto.com/vectors/vector-machine-learning-pattern-with-word-machine-learning-background-vector-id964864388') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+</style>
+
+<body>
+
+    <div class="container text-center">
+
+        <div class="card border-0 shadow mx-auto w-75">
+            <div>
+                <h1 class="display-3 mt-5">Bienvenido!</h1>
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    <div class="custom-file w-50 mt-3 mb-5">
+                        {{ form.as_p }}
+                        <input type="file" name="dataset" class="custom-file-input" required>
+                        <label class="custom-file-label">Seleccione su dataset</label>
+                    </div>
+                    <h4>Modelo a utilizar</h4>
+
+                    <div class="mt-1 mb-5">
+                        <select name="modelo_select" id="">
+                            <option value="" hidden selected disabled>Seleccione Modelo</option>
+                        {% for item in otro %}
+
+                        <option value= "{{ item.file_info }}"> {{ item.file_info }} </option>
+
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <button class="btn btn-success btn-lg btn-block" type="submit">Iniciar</button>
+                </form>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <title>Reconocimiento App</title>
+</head>
+<nav class="navbar navbar-light bg-dark mb-5 shadow">
+    <span class="navbar-brand mb-0 h1 text-white display-4">Reconocimiento de Actividades</span>
+</nav>
+
+<style>
+    body {
+        background: url('https://media.istockphoto.com/vectors/vector-machine-learning-pattern-with-word-machine-learning-background-vector-id964864388') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="mx-auto text-center">
+        <div class="mx-auto w-50">
+            <a href="http://127.0.0.1:8000" class="btn btn-warning btn-block mb-5">Volver</a>
+        </div>
+        <div class="card border-0 shadow mx-auto">
+            {{ data | safe}}
+        </div>
+    </div>
+</body>
+
+</html>
