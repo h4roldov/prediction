@@ -8,4 +8,6 @@ Selected model
 
 <img src=https://github.com/h4roldov/prediction/blob/master/web3.png>
 
+Results
+
 <img src=https://github.com/h4roldov/prediction/blob/master/web2.png>
